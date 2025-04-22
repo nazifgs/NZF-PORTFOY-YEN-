@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nazif Gürkan Şen - Portföy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #444;
+      cursor: pointer;
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #555;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    #hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 60px;
+      right: 10px;
+      width: 200px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      opacity: 0;
+      transform: scale(0.9);
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+
+    main {
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .name {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .description {
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .social-btn {
+      display: inline-block;
+      background: #E1306C;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      margin-bottom: 30px;
+    }
+
+    .social-btn:hover {
+      background: #c72b60;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    section h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .project {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #3c9f43;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      #hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">Nazif Gürkan Şen</div>
+    <nav>
+      <a href="#about">Hakkımda</a>
+      <a href="#projects">Projeler</a>
+      <a href="#contact">İletişim</a>
+    </nav>
+    <div id="hamburger">&#9776;</div>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#about">Hakkımda</a>
+      <a href="#projects">Projeler</a>
+      <a href="#contact">İletişim</a>
+    </div>
+  </header>
+
+  <main>
+    <img src="https://avatars.githubusercontent.com/u/12345678?v=4" alt="Nazif Gürkan Şen" class="profile-img" />
+    <div class="name">Nazif Gürkan Şen</div>
+    <div class="description">Web geliştirici, yazılıma meraklı, mobil uyumlu projeler tasarlayan biri.</div>
+    <a href="https://instagram.com/nazifgurkansen" class="social-btn" target="_blank">Instagram</a>
+  </main>
+
+  <section id="about">
+    <h2>Hakkımda</h2>
+    <p>Merhaba! Ben Nazif Gürkan Şen. Web geliştirme konusunda tutkuluyum ve mobil uyumlu, kullanıcı dostu arayüzler tasarlamayı seviyorum. Yazılıma olan ilgimle her geçen gün kendimi geliştiriyorum.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projeler</h2>
+    <div class="project">
+      <h3>Mobil Portföy Sitesi</h3>
+      <p>Bu site, mobil uyumlu olarak tasarlandı ve HTML, CSS kullanılarak geliştirildi.</p>
+    </div>
+    <div class="project">
+      <h3>Javascript Uygulaması</h3>
+      <p>Basit bir yapılacaklar listesi uygulaması. JavaScript DOM manipülasyonuyla hazırlandı.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>İletişim</h2>
+    <form>
+      <input type="text" placeholder="Adınız" required>
+      <input type="email" placeholder="E-posta" required>
+      <textarea placeholder="Mesajınız" rows="4" required></textarea>
+      <button type="submit">Gönder</button>
+    </form>
+  </section>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>
