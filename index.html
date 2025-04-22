@@ -152,6 +152,10 @@
     form {
       display: flex;
       flex-direction: column;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
 
     input, textarea {
@@ -231,10 +235,10 @@
 
   <section id="contact">
     <h2>İletişim</h2>
-    <form>
-      <input type="text" placeholder="Adınız" required>
-      <input type="email" placeholder="E-posta" required>
-      <textarea placeholder="Mesajınız" rows="4" required></textarea>
+    <form action="mailto:snazifgurkan@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="ad" placeholder="Adınız" required>
+      <input type="email" name="email" placeholder="E-posta" required>
+      <textarea name="mesaj" placeholder="Mesajınız" rows="5" required></textarea>
       <button type="submit">Gönder</button>
     </form>
   </section>
